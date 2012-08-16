@@ -1,12 +1,12 @@
 # GRequests + OAuth: Asynchronous, OAuth'd HTTP requests
 
-GRequests + OAuth allows you to make asynchronous, OAuth's HTTP requests easily.
+GRequests + OAuth allows you to make asynchronous, OAuth'd HTTP requests easily.
 
 Magic courtesy of [GRequests](https://github.com/kennethreitz/grequests) and [requests-oauth](https://github.com/maraujop/requests-oauth).
 
 ## Usage
 
-See [example.py](https://github.com/swinton/grequests-oauth/blob/dev/example.py).
+See [example.py](https://github.com/swinton/grequests-oauth/blob/master/example.py).
 
 Basically:
 
@@ -30,5 +30,5 @@ Basically:
 
 Simply:
     
-    pip install -r requirements
+    pip install -r requirements.txt
 
