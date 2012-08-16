@@ -31,7 +31,12 @@ Send them all at the same time:
 
 ## Installation
 
-Simply:
-    
-    pip install -r requirements.txt
+Clone:
+
+    $ git clone git://github.com/swinton/grequests-oauth.git .
+
+Install requirements:
+
+    $ pip install -r requirements.txt
+
 
