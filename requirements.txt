@@ -1,0 +1,5 @@
+gevent==0.13.7
+greenlet==0.4.0
+grequests==0.1.0
+requests==0.13.6
+requests-oauth==0.4.1
