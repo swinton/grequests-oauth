@@ -13,9 +13,12 @@ def grequests_oauth_client(access_token=None, access_token_secret=None, consumer
                            consumer_key=consumer_key, consumer_secret=consumer_secret, 
                            header_auth=header_auth)
 
-    # TODO: support other hooks passed in via kwargs
+    # Support other hooks passed in via kwargs
+    hooks = kwargs.get("hooks", {})
+    hooks.update(pre_request=oauth_hook)
+    kwargs["hooks"] = hooks
 
-    client = requests.session(hooks={'pre_request': oauth_hook})
+    client = requests.session(**kwargs)
 
     client.get = grequests.patched(client.get)
     client.options = grequests.patched(client.options)
