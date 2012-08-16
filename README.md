@@ -10,8 +10,6 @@ See [example.py](https://github.com/swinton/grequests-oauth/blob/master/example.
 
 Basically:
 
-    import json
-
     import grequests
 
     from grequests_oauth import grequests_oauth_client
@@ -22,9 +20,14 @@ Basically:
 
     urls = 5 * ['http://api.twitter.com/1/account/rate_limit_status.json']
 
-    rs = (client.get(u) for u in urls)
+Create a set of unsent Requests:
 
-    [json.loads(response.content) for response in grequests.map(rs)]
+    >>> rs = (client.get(u) for u in urls)
+
+Send them all at the same time:
+
+    >>> grequests.map(rs)
+    [<Response [200]>, <Response [200]>, <Response [200]>, <Response [200]>, <Response [200]>]
 
 ## Installation
 
